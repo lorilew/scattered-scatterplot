@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>D3: Transitions</title>
-		<script type="text/javascript" src="d3.js"></script>
+		<title>D3: Data-driven circles</title>
+		<script type="text/javascript" src="../d3.js"></script>
 		<style type="text/css">
 
 			body {
@@ -89,16 +89,15 @@
 			   .attr("cx", function(d) {
 					return d.x;
 			   })
-			   .attr("cy", h)
-			   .attr("r", 1)
-			   .transition()
-			   .duration(5000)
 			   .attr("cy", function(d) {
 				   return d.y;
 			   })
 			   .attr("r", function(d) {
 				   return d.r;
-			   });
+			   })
+         .style("fill", function(d) {
+           return d3.rgb((255-d.r*10), (194-d.r*10), 51)
+         });
 
 		</script>
 	</body>
