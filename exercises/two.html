@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Empty page template</title>
+		<script type="text/javascript" src="../d3.js"></script>
+	</head>
+  <style>
+    body {
+      background-color: gray;
+    }
+
+    svg {
+      background-color: white;
+    }
+  </style>
+	<body>
+		<script type="text/javascript">
+      body = d3.select("body")
+
+			svg = body.append("svg")
+                .attr("width", 300)
+                .attr("height", 200)
+
+      svg.append("circle")
+         .attr("cx", "100px")
+         .attr("cy", "50px")
+         .attr("r", "20px")
+         .style("fill", "red")
+
+       svg.append("circle")
+          .attr("cx", "200px")
+          .attr("cy", "50px")
+          .attr("r", "20px")
+          .style("fill", "red")
+
+      svg.append("circle")
+         .attr("cx", "150")
+         .attr("cy", "110px")
+         .attr("r", "50px")
+         .style("fill", "blue")
+
+		</script>
+	</body>
+</html>
